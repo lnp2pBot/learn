@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Learn @lnp2pBot</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,31 +62,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">@lnp2pBot</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what-is-lnp2pbot.html"><strong aria-hidden="true">1.1.</strong> What is @lnp2pBot?</a></li><li class="chapter-item expanded "><a href="what-is-lightning-network.html"><strong aria-hidden="true">1.2.</strong> What is Lightning Network?</a></li><li class="chapter-item expanded "><a href="what-do-i-need-to-use-lnp2pbot.html"><strong aria-hidden="true">1.3.</strong> What do I need to use @lnp2pBot?</a></li><li class="chapter-item expanded "><a href="how-do-i-initialize-the-bot.html"><strong aria-hidden="true">1.4.</strong> How do I initialize the bot?</a></li><li class="chapter-item expanded "><a href="what-are-the-channels-to-make-exchanges-on-telegram.html"><strong aria-hidden="true">1.5.</strong> What are the channels to make exchanges on Telegram?</a></li><li class="chapter-item expanded "><a href="where-i-can-find-offers-for-my-local-currency.html"><strong aria-hidden="true">1.6.</strong> Where I can find offers for my local currency?</a></li><li class="chapter-item expanded "><a href="do-i-need-to-fill-out-any-user-registration-or-identity-verification.html"><strong aria-hidden="true">1.7.</strong> Do I need to fill out any user registration or identity verification?</a></li><li class="chapter-item expanded "><a href="what-type-of-information-do-you-collect-from-each-user.html"><strong aria-hidden="true">1.8.</strong> What type of information do you collect from each user?</a></li><li class="chapter-item expanded "><a href="how-does-the-user-reputation-system-work.html"><strong aria-hidden="true">1.9.</strong> How does the user reputation system work?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-sell-order.html"><strong aria-hidden="true">1.10.</strong> How do I create a sell order?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-buy-order.html"><strong aria-hidden="true">1.11.</strong> How do I create a buy order?</a></li><li class="chapter-item expanded "><a href="how-do-i-find-and-accept-an-offer-to-buy-or-sell.html"><strong aria-hidden="true">1.12.</strong> How do I find and accept an offer to buy or sell?</a></li><li class="chapter-item expanded "><a href="how-do-i-cancel-a-posted-order.html"><strong aria-hidden="true">1.13.</strong> How do I cancel a posted order?</a></li><li class="chapter-item expanded "><a href="is-there-a-limit-on-the-amounts-i-can-trade.html"><strong aria-hidden="true">1.14.</strong> Is there a limit on the amounts I can trade?</a></li><li class="chapter-item expanded "><a href="how-long-does-it-take-to-finalize-a-transaction.html"><strong aria-hidden="true">1.15.</strong> How long does it take to finalize a transaction?</a></li><li class="chapter-item expanded "><a href="fees-and-commissions.html"><strong aria-hidden="true">1.16.</strong> Fees and commissions</a></li><li class="chapter-item expanded "><a href="what-exchange-rate-does-the-bot-use.html"><strong aria-hidden="true">1.17.</strong> What exchange rate does the bot use?</a></li><li class="chapter-item expanded "><a href="in-which-countries-is-it-available.html"><strong aria-hidden="true">1.18.</strong> In which countries is it available?</a></li><li class="chapter-item expanded "><a href="community-find.html"><strong aria-hidden="true">1.19.</strong> How can I find communities that operate with my currency?</a></li><li class="chapter-item expanded "><a href="how-do-i-make-offers-in-a-community.html"><strong aria-hidden="true">1.20.</strong> How do I make offers in a community?</a></li><li class="chapter-item expanded "><a href="recommended-wallets.html"><strong aria-hidden="true">1.21.</strong> Recommended Wallets</a></li><li class="chapter-item expanded "><a href="common-problems-and-solutions.html"><strong aria-hidden="true">1.22.</strong> Common problems and solutions</a></li><li class="chapter-item expanded "><a href="how-do-i-know-if-seller-released.html"><strong aria-hidden="true">1.23.</strong> How do I know if the seller really released the sats?</a></li><li class="chapter-item expanded "><a href="i-cant-receive.html"><strong aria-hidden="true">1.24.</strong> I can't receive the sats for my purchase</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">1.25.</strong> Support</a></li><li class="chapter-item expanded "><a href="contact-with-developers.html"><strong aria-hidden="true">1.26.</strong> Contact with developers</a></li><li class="chapter-item expanded "><a href="i-am-a-developer-and-i-want-to-contribute.html"><strong aria-hidden="true">1.27.</strong> I am a developer and I want to contribute</a></li></ol></li><li class="chapter-item expanded "><a href="communities.html"><strong aria-hidden="true">2.</strong> Communities</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="trust.html"><strong aria-hidden="true">2.1.</strong> Trust</a></li><li class="chapter-item expanded "><a href="benevolent-dictator.html"><strong aria-hidden="true">2.2.</strong> Benevolent Dictator</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-community.html"><strong aria-hidden="true">2.3.</strong> How do I create a community?</a></li><li class="chapter-item expanded "><a href="communities-first-steps.html"><strong aria-hidden="true">2.4.</strong> Communities first steps</a></li><li class="chapter-item expanded "><a href="modifying-a-community.html"><strong aria-hidden="true">2.5.</strong> Modifying a community</a></li><li class="chapter-item expanded "><a href="creating-orders.html"><strong aria-hidden="true">2.6.</strong> Creating orders</a></li><li class="chapter-item expanded "><a href="incentives.html"><strong aria-hidden="true">2.7.</strong> Incentives</a></li><li class="chapter-item expanded "><a href="managing-a-community.html"><strong aria-hidden="true">2.8.</strong> Managing a community</a></li><li class="chapter-item expanded "><a href="what-is-a-solver.html"><strong aria-hidden="true">2.9.</strong> What is a Solver</a></li><li class="chapter-item expanded "><a href="resolving-disputes.html"><strong aria-hidden="true">2.10.</strong> Resolving disputes</a></li><li class="chapter-item expanded "><a href="settle-order.html"><strong aria-hidden="true">2.11.</strong> Settling an order</a></li><li class="chapter-item expanded "><a href="cancel-order.html"><strong aria-hidden="true">2.12.</strong> Cancelling an order</a></li><li class="chapter-item expanded "><a href="removing-disputes.html"><strong aria-hidden="true">2.13.</strong> Removing disputes</a></li><li class="chapter-item expanded "><a href="ban-user-community.html"><strong aria-hidden="true">2.14.</strong> Banning a user from the community</a></li></ol></li><li class="chapter-item expanded "><a href="safe-trades-on-lnp2pbot.html"><strong aria-hidden="true">3.</strong> Safe trades on @lnp2pbot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scam-attempts.html"><strong aria-hidden="true">3.1.</strong> Scam attempts</a></li><li class="chapter-item expanded "><a href="tips-to-avoid-scams.html"><strong aria-hidden="true">3.2.</strong> Tips to avoid scams</a></li><li class="chapter-item expanded "><a href="account-triangulation-scams.html"><strong aria-hidden="true">3.3.</strong> Account triangulation scams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="prevention-of-account-triangulation-scams.html"><strong aria-hidden="true">3.3.1.</strong> Prevention of account triangulation scams</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">@lnp2pBot</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what-is-lnp2pbot.html"><strong aria-hidden="true">1.1.</strong> What is @lnp2pBot?</a></li><li class="chapter-item expanded "><a href="what-is-lightning-network.html"><strong aria-hidden="true">1.2.</strong> What is Lightning Network?</a></li><li class="chapter-item expanded "><a href="what-do-i-need-to-use-lnp2pbot.html"><strong aria-hidden="true">1.3.</strong> What do I need to use @lnp2pBot?</a></li><li class="chapter-item expanded "><a href="how-do-i-initialize-the-bot.html"><strong aria-hidden="true">1.4.</strong> How do I initialize the bot?</a></li><li class="chapter-item expanded "><a href="what-are-the-channels-to-make-exchanges-on-telegram.html"><strong aria-hidden="true">1.5.</strong> What are the channels to make exchanges on Telegram?</a></li><li class="chapter-item expanded "><a href="where-i-can-find-offers-for-my-local-currency.html"><strong aria-hidden="true">1.6.</strong> Where I can find offers for my local currency?</a></li><li class="chapter-item expanded "><a href="do-i-need-to-fill-out-any-user-registration-or-identity-verification.html"><strong aria-hidden="true">1.7.</strong> Do I need to fill out any user registration or identity verification?</a></li><li class="chapter-item expanded "><a href="what-type-of-information-do-you-collect-from-each-user.html"><strong aria-hidden="true">1.8.</strong> What type of information do you collect from each user?</a></li><li class="chapter-item expanded "><a href="how-does-the-user-reputation-system-work.html"><strong aria-hidden="true">1.9.</strong> How does the user reputation system work?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-sell-order.html"><strong aria-hidden="true">1.10.</strong> How do I create a sell order?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-buy-order.html"><strong aria-hidden="true">1.11.</strong> How do I create a buy order?</a></li><li class="chapter-item expanded "><a href="how-do-i-find-and-accept-an-offer-to-buy-or-sell.html"><strong aria-hidden="true">1.12.</strong> How do I find and accept an offer to buy or sell?</a></li><li class="chapter-item expanded "><a href="how-do-i-cancel-a-posted-order.html"><strong aria-hidden="true">1.13.</strong> How do I cancel a posted order?</a></li><li class="chapter-item expanded "><a href="is-there-a-limit-on-the-amounts-i-can-trade.html"><strong aria-hidden="true">1.14.</strong> Is there a limit on the amounts I can trade?</a></li><li class="chapter-item expanded "><a href="how-long-does-it-take-to-finalize-a-transaction.html"><strong aria-hidden="true">1.15.</strong> How long does it take to finalize a transaction?</a></li><li class="chapter-item expanded "><a href="fees-and-commissions.html"><strong aria-hidden="true">1.16.</strong> Fees and commissions</a></li><li class="chapter-item expanded "><a href="what-exchange-rate-does-the-bot-use.html"><strong aria-hidden="true">1.17.</strong> What exchange rate does the bot use?</a></li><li class="chapter-item expanded "><a href="in-which-countries-is-it-available.html"><strong aria-hidden="true">1.18.</strong> In which countries is it available?</a></li><li class="chapter-item expanded "><a href="community-find.html"><strong aria-hidden="true">1.19.</strong> How can I find communities that operate with my currency?</a></li><li class="chapter-item expanded "><a href="how-do-i-make-offers-in-a-community.html"><strong aria-hidden="true">1.20.</strong> How do I make offers in a community?</a></li><li class="chapter-item expanded "><a href="recommended-wallets.html"><strong aria-hidden="true">1.21.</strong> Recommended Wallets</a></li><li class="chapter-item expanded "><a href="common-problems-and-solutions.html"><strong aria-hidden="true">1.22.</strong> Common problems and solutions</a></li><li class="chapter-item expanded "><a href="how-do-i-know-if-seller-released.html"><strong aria-hidden="true">1.23.</strong> How do I know if the seller really released the sats?</a></li><li class="chapter-item expanded "><a href="i-cant-receive.html"><strong aria-hidden="true">1.24.</strong> I can't receive the sats for my purchase</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">1.25.</strong> Support</a></li><li class="chapter-item expanded "><a href="contact-with-developers.html"><strong aria-hidden="true">1.26.</strong> Contact with developers</a></li><li class="chapter-item expanded "><a href="i-am-a-developer-and-i-want-to-contribute.html"><strong aria-hidden="true">1.27.</strong> I am a developer and I want to contribute</a></li></ol></li><li class="chapter-item expanded "><a href="communities.html"><strong aria-hidden="true">2.</strong> Communities</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="trust.html"><strong aria-hidden="true">2.1.</strong> Trust</a></li><li class="chapter-item expanded "><a href="benevolent-dictator.html"><strong aria-hidden="true">2.2.</strong> Benevolent Dictator</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-community.html"><strong aria-hidden="true">2.3.</strong> How do I create a community?</a></li><li class="chapter-item expanded "><a href="communities-first-steps.html"><strong aria-hidden="true">2.4.</strong> Communities first steps</a></li><li class="chapter-item expanded "><a href="modifying-a-community.html"><strong aria-hidden="true">2.5.</strong> Modifying a community</a></li><li class="chapter-item expanded "><a href="creating-orders.html"><strong aria-hidden="true">2.6.</strong> Creating orders</a></li><li class="chapter-item expanded "><a href="incentives.html"><strong aria-hidden="true">2.7.</strong> Incentives</a></li><li class="chapter-item expanded "><a href="managing-a-community.html"><strong aria-hidden="true">2.8.</strong> Managing a community</a></li><li class="chapter-item expanded "><a href="what-is-a-solver.html"><strong aria-hidden="true">2.9.</strong> What is a Solver</a></li><li class="chapter-item expanded "><a href="resolving-disputes.html"><strong aria-hidden="true">2.10.</strong> Resolving disputes</a></li><li class="chapter-item expanded "><a href="settle-order.html"><strong aria-hidden="true">2.11.</strong> Settling an order</a></li><li class="chapter-item expanded "><a href="cancel-order.html"><strong aria-hidden="true">2.12.</strong> Cancelling an order</a></li><li class="chapter-item expanded "><a href="removing-disputes.html"><strong aria-hidden="true">2.13.</strong> Removing disputes</a></li><li class="chapter-item expanded "><a href="ban-user-community.html"><strong aria-hidden="true">2.14.</strong> Banning a user from the community</a></li></ol></li><li class="chapter-item expanded "><a href="safe-trades-on-lnp2pbot.html"><strong aria-hidden="true">3.</strong> Safe trades on @lnp2pbot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scam-attempts.html"><strong aria-hidden="true">3.1.</strong> Scam attempts</a></li><li class="chapter-item expanded "><a href="tips-to-avoid-scams.html"><strong aria-hidden="true">3.2.</strong> Tips to avoid scams</a></li><li class="chapter-item expanded "><a href="account-triangulation-scams.html"><strong aria-hidden="true">3.3.</strong> Account triangulation scams</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="prevention-of-account-triangulation-scams.html"><strong aria-hidden="true">3.3.1.</strong> Prevention of account triangulation scams</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="contribute.html"><strong aria-hidden="true">4.</strong> How to contribute</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="how-translate-the-bot.html"><strong aria-hidden="true">4.1.</strong> Translate the bot</a></li><li class="chapter-item expanded "><a href="how-colaborate-with-documentation-translation.html"><strong aria-hidden="true">4.2.</strong> Translate and collaborate with documentation</a></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -117,9 +124,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -232,9 +239,9 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-lightning-network"><a class="header" href="#what-is-lightning-network">What is Lightning Network?</a></h1>
 <p><a href="https://youtu.be/XCSfoiD8wUA">Lighting Network</a> is a network of payment channels that works as a second layer protocol on the Bitcoin network, taking advantage of the property of writing smart contracts on its blockchain. It is a scalability solution that allows exponentially increasing the number of transactions and their speed by not needing on-chain confirmations, while drastically reducing network fees. Payments become instant and cost almost nothing.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-do-i-need-to-use-lnp2pbot"><a class="header" href="#what-do-i-need-to-use-lnp2pbot">What do I need to use @lnp2pBot?</a></h1>
-<p>You only need an account on <a href="https://telegram.org/">Telegram</a> with an active <em>&quot;username&quot;</em> or <a href="https://telegram.org/faq?setln=en#usernames-and-t-me">username</a> to initialize the bot and interact with it. Additionally, you'll require a wallet that supports the Lightning Network. <a href="./recommended-wallets.html">Here are some recommended wallets</a>.</p>
+<p>You only need an account on <a href="https://telegram.org/">Telegram</a> with an active <em>"username"</em> or <a href="https://telegram.org/faq?setln=en#usernames-and-t-me">username</a> to initialize the bot and interact with it. Additionally, you'll require a wallet that supports the Lightning Network. <a href="./recommended-wallets.html">Here are some recommended wallets</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-initialize-the-bot"><a class="header" href="#how-do-i-initialize-the-bot">How do I initialize the bot?</a></h1>
-<p>Open a private chat with <a href="https://t.me/lnp2pbot">@lnp2pBot</a> and click on <strong>&quot;START&quot;</strong> or execute the command <code>/start</code>.</p>
+<p>Open a private chat with <a href="https://t.me/lnp2pbot">@lnp2pBot</a> and click on <strong>"START"</strong> or execute the command <code>/start</code>.</p>
 <ul>
 <li>If you don't initialize the bot first, you won't be able to take any orders from the channels where they are published.</li>
 </ul>
@@ -248,7 +255,7 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <p><code>/findcomms ves</code></p>
 <p>You can also search for offers filtered by currencies and communities on <a href="https://market.lnp2pbot.com">https://market.lnp2pbot.com</a> and in the general channel <a href="https://t.me/p2plightning">@p2plightning</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="do-i-need-to-fill-out-any-user-registration-or-identity-verification"><a class="header" href="#do-i-need-to-fill-out-any-user-registration-or-identity-verification">Do I need to fill out any user registration or identity verification?</a></h1>
-<p>NO! Bitcoin was born as <em>&quot;a peer-to-peer electronic money system&quot;</em>, and we are proud to support that principle. No personal information is required from you, the exchanges are entirely between peers, and <a href="https://t.me/lnp2pbot">@lnp2pBot</a> does not collect or store any personal information of the parties involved.</p>
+<p>NO! Bitcoin was born as <em>"a peer-to-peer electronic money system"</em>, and we are proud to support that principle. No personal information is required from you, the exchanges are entirely between peers, and <a href="https://t.me/lnp2pbot">@lnp2pBot</a> does not collect or store any personal information of the parties involved.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-type-of-information-do-you-collect-from-each-user"><a class="header" href="#what-type-of-information-do-you-collect-from-each-user">What type of information do you collect from each user?</a></h1>
 <p>For the purposes of the user reputation system, lnp2pBot collects some statistics on your trades. Specifically, the number of completed transactions, the total volume traded, the counterparty rating and the record of disputes if any. Of this information, only the number of transactions and the counterparty rating are public by default. Meanwhile, showing the total volume traded and your username is optional (you choose to show it or not, by default it is not shown).</p>
 <p>In case you want to show your username and/or volume traded to accompany your reputation in the offers you publish, you must do it manually through the following commands:</p>
@@ -264,16 +271,16 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <p>When you create an offer, it will include by default the number of successful operations you've conducted, the ratings received from your counterparts, and the number of operations performed. We recommend considering all these aspects when accepting an offer to avoid scams.</p>
 <p><img src="./assets/images/reputation-system.jpg" alt="Reputation System" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-create-a-sell-order"><a class="header" href="#how-do-i-create-a-sell-order">How do I create a sell order?</a></h1>
-<p>When chatting with <a href="https://t.me/lnp2pbot">@lnp2pBot</a> you will find a &quot;Menu&quot; button. Click it to display the list of commands you can use. Select the sell command: <code>/sell</code>, to activate the wizard that will guide you through the selling process.</p>
+<p>When chatting with <a href="https://t.me/lnp2pbot">@lnp2pBot</a> you will find a "Menu" button. Click it to display the list of commands you can use. Select the sell command: <code>/sell</code>, to activate the wizard that will guide you through the selling process.</p>
 <p><img src="./assets/images/sell-start.jpg" alt="Start the wizard" /></p>
 <p>Once activated, the wizard will ask you to specify the fiat currency in which you want to trade:</p>
 <p><img src="./assets/images/sell-fiat.jpg" alt="Fiat currency" /></p>
 <p>Next, you must enter the amount, in fiat currency, that you want in exchange for your satoshis. Remember to enter only numbers in this step, so that the wizard can understand you.</p>
 <p>You can also enter a range of amounts to buy, separating the numbers by a hyphen (-).</p>
 <p><img src="./assets/images/amount.jpg" alt="Fiat Amount" /></p>
-<p>The bot will ask you the amount, in satoshis, you want to deliver. Here you have the possibility to use the &quot;Market price&quot; button. If you do so, the rate of <a href="https://yadio.io/">Yadio. io</a> will be applied.</p>
+<p>The bot will ask you the amount, in satoshis, you want to deliver. Here you have the possibility to use the "Market price" button. If you do so, the rate of <a href="https://yadio.io/">Yadio. io</a> will be applied.</p>
 <p><img src="./assets/images/amount-sats-market-price.jpg" alt="Amount sats" /></p>
-<p>The next thing the wizard prompts you for is the percentage premium or discount you want on your swap. If you want to increase the market rate (premium), select a positive number; if you want to decrease it (discount), select a negative number. If you want neither, use the &quot;No premium or discount&quot; button.</p>
+<p>The next thing the wizard prompts you for is the percentage premium or discount you want on your swap. If you want to increase the market rate (premium), select a positive number; if you want to decrease it (discount), select a negative number. If you want neither, use the "No premium or discount" button.</p>
 <p><img src="./assets/images/sell-prima.jpg" alt="Premium or discount" /></p>
 <p>Next, you will need to specify the payment method. In this field, you can get creative and add emoticons or whatever you consider to make your request attractive.</p>
 <p>The bot will proceed to publish your offer in the general or community channel you have set as default. It will remain visible for 23 hours if no one takes it before that time.</p>
@@ -289,18 +296,18 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <p>The exchange is finished. Now you can rate your counterparty.</p>
 <p>You can exit the wizard at any time by executing the <code>/exit</code> command.</p>
 <p>To execute the same sell order, without using the wizard, you must type your order with the details: <code>/sell &lt;amount in sats&gt; &lt;amount in fiat&gt; &lt;fiat code&gt; &lt;payment method&gt; [premium/discount]</code> (without the special characters).</p>
-<p>Example: <code>/sell 100000 50 USD &quot;bank xyz&quot;</code> I sell one hundred thousand sats at fifty dollars I charge by bank xyz.</p>
+<p>Example: <code>/sell 100000 50 USD "bank xyz"</code> I sell one hundred thousand sats at fifty dollars I charge by bank xyz.</p>
 <p>In case there is any unsupported variable, the bot will indicate it to you during the order creation process. Once completed, the order will be published in the exchange channel and will be visible for a period of 23 hours.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-create-a-buy-order"><a class="header" href="#how-do-i-create-a-buy-order">How do I create a buy order?</a></h1>
-<p>The procedure is exactly the same as for a sell order. However, when you press the &quot;Menu&quot; button, select the <code>/buy</code> command instead of <code>/sell</code>. This will activate the wizard that guides you through the buying process.</p>
+<p>The procedure is exactly the same as for a sell order. However, when you press the "Menu" button, select the <code>/buy</code> command instead of <code>/sell</code>. This will activate the wizard that guides you through the buying process.</p>
 <p>Once activated, the wizard will prompt you to specify the fiat currency you want to transact with:</p>
 <p><img src="./assets/images/buy-fiat.jpg" alt="Fiat currency" /></p>
 <p>Next, enter the amount, in fiat currency, you wish to buy. Remember to input only numbers at this step so that the wizard can understand.</p>
 <p>You can also enter a range of amounts to buy by separating the numbers with a hyphen (-).</p>
 <p><img src="./assets/images/buy-monto.jpg" alt="Fiat amount" /></p>
-<p>The wizard will ask for the amount, in satoshis, you want to receive. Here, you have the option to use the &quot;Market Price&quot; button. If you do, it will apply the rate from <a href="https://yadio.io/">Yadio.io</a>.</p>
+<p>The wizard will ask for the amount, in satoshis, you want to receive. Here, you have the option to use the "Market Price" button. If you do, it will apply the rate from <a href="https://yadio.io/">Yadio.io</a>.</p>
 <p><img src="./assets/images/buy-price.jpg" alt="Satoshi amount" /></p>
-<p>Next, the wizard will request the percentage of premium or discount you desire in your exchange. If you want to increase the market rate (premium), select a positive number. If you want to decrease it (discount), choose a negative number. If you don’t want either, use the &quot;No premium or discount&quot; button.</p>
+<p>Next, the wizard will request the percentage of premium or discount you desire in your exchange. If you want to increase the market rate (premium), select a positive number. If you want to decrease it (discount), choose a negative number. If you don’t want either, use the "No premium or discount" button.</p>
 <p><img src="./assets/images/buy-prima.jpg" alt="Premium or discount" /></p>
 <p>You'll then need to specify the payment method. Here, you can get creative and add emojis or anything you feel will make your offer attractive.</p>
 <p><img src="./assets/images/buy-payment-method.jpg" alt="Payment method" /></p>
@@ -316,13 +323,13 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <p>The exchange is completed. Now you can rate your counterpart.</p>
 <p>You can exit the wizard at any time by executing the command <code>/exit</code>.</p>
 <p>To execute the same buy order without using the wizard, you must write your order details: <code>/buy</code> <satoshi amount> <fiat amount> <fiat code> <payment method> [premium/discount] (without special characters).</p>
-<p>Example: <code>/buy 100000 50 usd &quot;xyz bank&quot;</code></p>
+<p>Example: <code>/buy 100000 50 usd "xyz bank"</code></p>
 <p>Buying one hundred thousand satoshis at fifty dollars paying via xyz bank.</p>
 <p>Some examples of buy orders would be:</p>
 <ul>
-<li>Ex. <code>/buy 0 50 ves &quot;xyz bank&quot;</code>: Buying fifty bolivars in satoshis - in this case, the bot will calculate at the market rate - paying via xyz bank</li>
-<li>Ex. <code>/buy 0 10-100 pen &quot;mobile payment&quot;</code>: Buying from 10 to 100 new soles - in this case, the seller will choose the amount to sell you within that range - paying via mobile payment</li>
-<li>Ex. <code>/buy 0 100 eur &quot;mobile payment&quot; -3</code>: Buying 100 euros with a 3% discount - in this case, the bot will calculate at the market rate by discounting or increasing the percentage you choose - paying via mobile payment</li>
+<li>Ex. <code>/buy 0 50 ves "xyz bank"</code>: Buying fifty bolivars in satoshis - in this case, the bot will calculate at the market rate - paying via xyz bank</li>
+<li>Ex. <code>/buy 0 10-100 pen "mobile payment"</code>: Buying from 10 to 100 new soles - in this case, the seller will choose the amount to sell you within that range - paying via mobile payment</li>
+<li>Ex. <code>/buy 0 100 eur "mobile payment" -3</code>: Buying 100 euros with a 3% discount - in this case, the bot will calculate at the market rate by discounting or increasing the percentage you choose - paying via mobile payment</li>
 </ul>
 <p>If there's any incompatible variable, the bot will indicate it during the order creation process. Once completed, it will automatically publish on the exchange channel and remain visible for a period of 23 hours.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-search-for-and-accept-a-buying-or-selling-offer"><a class="header" href="#how-do-i-search-for-and-accept-a-buying-or-selling-offer">How do I search for and accept a buying or selling offer?</a></h1>
@@ -335,7 +342,7 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <li>Another way to take an offer is to use the command <code>/takeorder &lt;order id&gt;</code>. For example, if you organize a Sat exchange with someone via <a href="https://t.me/lnp2pbot">@lnp2pbot</a>, your counterpart can create the order and send you its ID. You can then directly take it from within the bot using the mentioned command, avoiding the need to go to the offers channel where it was published.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-cancel-a-posted-order"><a class="header" href="#how-do-i-cancel-a-posted-order">How do I cancel a posted order?</a></h1>
-<p>If the order hasn't been taken, type the command <code>/cancel</code> in your chat with the bot or select it from the &quot;Menu.&quot; The bot will display your active orders. Choose the ID corresponding to the order you wish to cancel.</p>
+<p>If the order hasn't been taken, type the command <code>/cancel</code> in your chat with the bot or select it from the "Menu." The bot will display your active orders. Choose the ID corresponding to the order you wish to cancel.</p>
 <p>The ID or unique number of your order appears just below the acceptance and posting message of your order and is even indicated as an option to cancel it. You can also find it by typing the command <code>/listorders</code>.</p>
 <p>If your order has already been taken or if you take an order and don’t wish to proceed, you'll need to initiate a cooperative cancellation.</p>
 <p><img src="./assets/images/cancel-order.gif" alt="Cancel Order" /></p>
@@ -489,7 +496,7 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 <p><code>/findcomms &lt;fiat code&gt;</code></p>
 <p>For example, <code>/findcomms usd</code> is used to search for all communities trading with USD. If you don't know your currency code, type <code>/listcurrencies</code> in the bot and find it.</p>
 <p><img src="./assets/images/findcomms.jpg" alt="Find Community Capture" /></p>
-<p>Upon selecting a community, the bot will display the number of successful orders, the trading volume operated in the last 24 hours, and the number of users posting their offers there. To set which community you want to publish your offers in, you should select the &quot;Use as default&quot; button.</p>
+<p>Upon selecting a community, the bot will display the number of successful orders, the trading volume operated in the last 24 hours, and the number of users posting their offers there. To set which community you want to publish your offers in, you should select the "Use as default" button.</p>
 <p><img src="./assets/images/comm-detail.jpg" alt="Community details Capture" /></p>
 <ul>
 <li>Another way to do it is by typing:
@@ -524,7 +531,7 @@ Type <code>/buy</code> in <a href="https://t.me/lnp2pbot">@lnp2pBot</a> to <a hr
 </ul>
 <h4 id="notes-on-other-wallets"><a class="header" href="#notes-on-other-wallets">Notes on other wallets</a></h4>
 <p>With <code>Wallet of Satoshi</code>, or any other custodial service, it might occur that if you're selling Sats and the order is canceled, your wallet balance might take a while to update, and the Sats might not appear available for some hours, even if they're in the wallet's node. This delay happens because custodial wallets update their users' balances periodically, so you'll have to wait for a few hours.</p>
-<p>It's common for payments from <a href="https://t.me/lnp2pBot">@lnp2pBot</a> to <code>Muun wallet</code> to fail because the bot can only pay a maximum routing fee of up to 0.2%. Hence, it might not cover the invoice when Muun charges fees higher than that. In such cases, you'll need to generate a new invoice from another wallet (More info <a href="./i-cant-receive.html">here</a>). 
+<p>It's common for payments from <a href="https://t.me/lnp2pBot">@lnp2pBot</a> to <code>Muun wallet</code> to fail because the bot can only pay a maximum routing fee of up to 0.2%. Hence, it might not cover the invoice when Muun charges fees higher than that. In such cases, you'll need to generate a new invoice from another wallet (More info <a href="./i-cant-receive.html">here</a>).
 It's also possible that if you're selling Sats from Muun wallet and the order is canceled, a fee will still be charged because Muun wallet isn't a native LN wallet; it's an on-chain wallet that operates through submarine swaps. For any transaction, you'll have to pay the mining fee, even if the bot's hold invoice was canceled.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="common-problems-and-solutions"><a class="header" href="#common-problems-and-solutions">Common Problems and Solutions</a></h1>
 <h3 id="im-trying-to-take-an-order-but-nothing-happens"><a class="header" href="#im-trying-to-take-an-order-but-nothing-happens">I'm trying to take an order, but nothing happens</a></h3>
@@ -555,7 +562,7 @@ For the bot to respond to your request, it's necessary to <a href="./how-do-i-in
 <h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
 <p>When a payment fails, the bot will attempt to make the payment two more times with 5-minute intervals. If it continues to fail, the bot will ask you to provide a new invoice to continue trying. It's advisable to generate this invoice from another <a href="./recommended-wallets.html">wallet</a>.</p>
 <p>If you don't input the invoice within 20 minutes after the bot requests it, that assistant will be canceled, and it won't request it again later. In that case, you should input it using the command:
-<code>/setinvoice &lt;order id&gt; &lt;lightning invoice&gt;</code> 
+<code>/setinvoice &lt;order id&gt; &lt;lightning invoice&gt;</code>
 (Do not include the symbols &lt;&gt;, separate each part with a space, and do not reuse invoices).</p>
 <p>If you've tried several times and still haven't received the Sats, stay calm. It's no longer possible to cancel the transaction or return the Sats to the seller. Instead, they are in the bot's node, and you can continue trying with new invoices as many times as necessary until you receive them.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="support"><a class="header" href="#support">Support</a></h1>
@@ -576,15 +583,15 @@ For the bot to respond to your request, it's necessary to <a href="./how-do-i-in
 <p>Communities can be created around a project, a currency, or a country, for example.</p>
 <p>Anyone can create a community and interact with the bot from it. Witch leaves creators/administrators with great power in their hands, “a great power comes with a great responsibility” This means that once users start working in their own communities, they will also have to manage any disputes that may occur.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="trust"><a class="header" href="#trust">Trust</a></h1>
-<p>The model we have chosen to resolve disputes is that of trust. This seems paradoxical for those who work with Bitcoin and advocate of &quot;trustless&quot; systems. The truth is that the goal is to develop systems in which we do not have to trust anyone. But after thinking a lot about dispute resolution systems, we had to accept that you always have to trust someone to some extent.</p>
+<p>The model we have chosen to resolve disputes is that of trust. This seems paradoxical for those who work with Bitcoin and advocate of "trustless" systems. The truth is that the goal is to develop systems in which we do not have to trust anyone. But after thinking a lot about dispute resolution systems, we had to accept that you always have to trust someone to some extent.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="benevolent-dictator"><a class="header" href="#benevolent-dictator">Benevolent Dictator</a></h1>
-<p>Having accepted that trusting someone is necessary to resolve a dispute, how can we create fewer incentives for disputes to arise? Regarding this matter, the community has proposed several ideas. The one we've developed is to utilize the concept of a &quot;benevolent dictator.&quot; This individual acts as a &quot;dictator&quot; whom people accept and trust to make decisions for the community's welfare. Let's say it's a trusted mediator within the community.</p>
-<p>The benevolent dictator is the creator of the community, responsible for appointing dispute solvers or 'solvers'. These individuals are publicly recognized within the community (by their Telegram username). The community is responsible for reporting if these users are performing their duties correctly or not. In a community where the &quot;benevolent dictator&quot; selects solvers correctly, everything will function well. In a community where the dictator makes mistakes, community members might move to another community or create a new one. This way, we delegate this responsibility to the communities.</p>
+<p>Having accepted that trusting someone is necessary to resolve a dispute, how can we create fewer incentives for disputes to arise? Regarding this matter, the community has proposed several ideas. The one we've developed is to utilize the concept of a "benevolent dictator." This individual acts as a "dictator" whom people accept and trust to make decisions for the community's welfare. Let's say it's a trusted mediator within the community.</p>
+<p>The benevolent dictator is the creator of the community, responsible for appointing dispute solvers or 'solvers'. These individuals are publicly recognized within the community (by their Telegram username). The community is responsible for reporting if these users are performing their duties correctly or not. In a community where the "benevolent dictator" selects solvers correctly, everything will function well. In a community where the dictator makes mistakes, community members might move to another community or create a new one. This way, we delegate this responsibility to the communities.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-do-i-create-a-community"><a class="header" href="#how-do-i-create-a-community">How do I create a community?</a></h1>
 <p>To create a community, simply type the <code>/community</code> command. After this, the bot will ask you to indicate the following:</p>
 <ul>
 <li>Community Name: A name to identify your community.</li>
-<li>Currencies: Fiat currencies that can operate in the community. These must be entered separately from a blank space. For example, for an Uruguayan community, &quot;UYU USD&quot; can be added.</li>
+<li>Currencies: Fiat currencies that can operate in the community. These must be entered separately from a blank space. For example, for an Uruguayan community, "UYU USD" can be added.</li>
 <li>Community Group: This is the main group where members of the community meet. Both <a href="https://t.me/lnp2pbot">@lnp2pbot</a> and the person creating the community must be administrators in this group. Users will be able to create orders by sending bot commands in this group.</li>
 <li>Order book channel or channels: Orders will be published where we indicate to the bot. If we enter a single channel, the purchases and sales will be published in that channel, but if you indicate two channels, the purchases will be published in the first and the sales in the second. Channels are entered separately with a blank space and both the bot and the community creator must be channel admins.</li>
 <li>Solvers: We must indicate the “usernames” of the users who will be in charge of resolving the disputes, separated by a blank space.</li>
@@ -717,10 +724,10 @@ In such situations, the buyer risks the possibility that the seller does not rec
 <p>Be cautious if a buying offer seems too good to be true; it might be a scam.</p>
 </li>
 <li>
-<p>In fiat payment methods that allow adding comments to the transfer, you could ask the buyer to write a specific phrase you mention at that moment, like &quot;I'm buying an orange.&quot; This way, if they were a scammer, they'd have to ask the victim to write that comment to send the fiat, which could raise suspicion as it's highly unlikely that they are buying an orange.</p>
+<p>In fiat payment methods that allow adding comments to the transfer, you could ask the buyer to write a specific phrase you mention at that moment, like "I'm buying an orange." This way, if they were a scammer, they'd have to ask the victim to write that comment to send the fiat, which could raise suspicion as it's highly unlikely that they are buying an orange.</p>
 </li>
 </ul>
-<p>You can modify that phrase to a numerical code or another message you find appropriate to prevent a scam. Another method, though not highly recommended due to privacy concerns, is to request the phrase to be: &quot;This payment is for a purchase of X Sats on @lnp2pbot for order ID: Y.&quot;</p>
+<p>You can modify that phrase to a numerical code or another message you find appropriate to prevent a scam. Another method, though not highly recommended due to privacy concerns, is to request the phrase to be: "This payment is for a purchase of X Sats on @lnp2pbot for order ID: Y."</p>
 <ul>
 <li>
 <p>Some fiat payment methods don't allow adding comments but reveal both parties' phone numbers. In such cases, you could ask the buyer, before releasing the Sats, for an SMS from the number that sent the fiat, containing any of the aforementioned messages or similar messages. Another approach could be a call initiated by them or you, directly confirming no third-party involvement in the fiat transfer.</p>
@@ -731,6 +738,99 @@ In such situations, the buyer risks the possibility that the seller does not rec
 </ul>
 <p>Remember, if you're uncomfortable with a transaction, you can engage in a cooperative cancellation with <code>/cancel</code> and return the fiat to the same account from which it was sent. If the other party is unwilling to cooperate, you should open a dispute with <code>/dispute</code> and wait for a solver to resolve the case.</p>
 <p>The preventive measures mentioned here may not apply to all fiat money payment methods. If you're aware of other methods, please share them and contribute to preventing scams.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-contribute"><a class="header" href="#how-to-contribute">How to contribute?</a></h1>
+<p><a href="https://t.me/lnp2pBot">lnp2pBot</a> is a fully open-source project, maintained by the community. Many users ask how they can contribute, or if code knowledge is necessary to do so. In this section, we present some ways in which you can collaborate. Although these are not the only ways, any type of help is valuable for the project. Thank you very much for considering it!</p>
+<ul>
+<li>
+<p><a href="./how-translate-the-bot.html"><strong>Translation of the Bot</strong></a>: If you are multilingual, you can help translate the bot into other languages to enhance its accessibility.</p>
+</li>
+<li>
+<p><a href="./how-colaborate-with-documentation-translation.html"><strong>Help with Documentation and its translation</strong></a>: If you have skills in writing and/or translation, you can collaborate to improve the project documentation and/or translate it, making it more accessible and understandable for everyone.</p>
+</li>
+<li>
+<p><strong>Development</strong>: If you are a developer, your skills are essential. You can contribute by writing code, implementing new features, and fixing bugs.</p>
+</li>
+<li>
+<p><strong>Report errors</strong>: If you encounter any errors or unexpected behavior in the bot, reporting them is very useful. It helps us improve the stability and quality of the project.</p>
+</li>
+<li>
+<p><strong>Propose improvements</strong>: If you have ideas to enhance <a href="https://t.me/lnp2pBot">lnp2pBot</a>, we invite you to share them with us. Several important features of the bot have originated from community proposals.</p>
+</li>
+<li>
+<p><strong>Create video tutorials and guides</strong>: If you have skills in creating multimedia content, you can produce video tutorials or written guides to help users make the most out of the bot.</p>
+</li>
+<li>
+<p><strong>Dissemination on social media</strong>: Sharing information about <a href="https://t.me/lnp2pBot">lnp2pBot</a> on social media helps increase its visibility and attract more people interested in contributing or using it.</p>
+</li>
+<li>
+<p><strong>Donations</strong>: If you would like to financially support the development and maintenance of <a href="https://t.me/lnp2pBot">lnp2pBot</a>, please consider making a donation. Each contribution helps cover hosting, development, and other project-related expenses.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-translate-the-bot"><a class="header" href="#how-to-translate-the-bot">How to translate the bot?</a></h1>
+<p>To translate <a href="https://t.me/lnp2pBot">lnp2pBot</a>, you must do a pull request <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">(Pull Request or PR)</a> on the GitHub repository <a href="https://github.com/lnp2pBot/bot">https://github.com/lnp2pBot/bot</a> by adding a new <code>.yaml</code> file in <a href="https://github.com/lnp2pBot/bot/tree/main/locales">https://github.com/lnp2pBot/bot/tree/main/locales</a> with the translation of the bot strings.</p>
+<p>The new <code>yaml</code> file should be named using language codes <a href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">ISO 639-1</a>, for example, in Spanish it is <code>es</code>, then the name should be <code>es.yaml</code>.</p>
+<p>You can use as a guide <a href="https://github.com/lnp2pBot/bot/blob/main/locales/en.yaml">https://github.com/lnp2pBot/bot/blob/main/locales/en.yaml</a>, copy it and modify only the texts that are not a key (the keys are the ones before the colon : ).</p>
+<p>You can also use as a reference some previously added language PR: <a href="https://github.com/lnp2pBot/bot/pull/460">https://github.com/lnp2pBot/bot/pull/460</a>.</p>
+<p>If you are not a technical person, don't worry, just download <code>en.yaml</code> or the translation where you feel most comfortable, translate it and send it to some administrator of the <a href="https://t.me/lnp2pbotHelp">telegram group</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-translate-and-collaborate-with-documentation"><a class="header" href="#how-to-translate-and-collaborate-with-documentation">How to translate and collaborate with documentation?</a></h1>
+<p>The <a href="https://t.me/lnp2pBot">lnp2pBot</a> documentation has been created with <a href="https://rust-lang.github.io/mdBook">mdBook</a>, a versatile tool that enables us to organize it clearly and coherently, this includes the creation of chapters, sections, cross-links, etc, ensuring fluid navigation and easy comprehension of the content.</p>
+<p>Below, we provide a step-by-step guide on how to translate the documentation. This guide can also be useful if you wish to add more content or improve existing material:</p>
+<ol>
+<li>
+<p><strong>Install Rust:</strong> <a href="https://www.rust-lang.org/tools/install">https://www.rust-lang.org/tools/install</a></p>
+</li>
+<li>
+<p><strong>Install mdBook:</strong></p>
+</li>
+</ol>
+<pre><code class="language-bash">$ cargo install mdbook
+</code></pre>
+<ol start="3">
+<li><strong>Clone the repository and create a new language directory:</strong> Clone the repository <a href="https://github.com/lnp2pBot/doc-site">https://github.com/lnp2pBot/doc-site</a> and then create a new directory for the language you want to translate the documentation into, based on the existing English or Spanish directory (these are the most frequently updated).</li>
+</ol>
+<pre><code class="language-bash">$ git clone https://github.com/lnp2pBot/doc-site.git
+
+$ cd doc-site
+
+$ cp -r english &lt;your-language&gt;
+</code></pre>
+<ol start="4">
+<li><strong>Modify the <code>book.toml</code> file:</strong>
+You must set the <code>language</code> and <code>title</code> parameters in the <code>book.toml</code> file. For <code>language</code>, you must use the language codes <a href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">ISO 639-1</a>; and fot <code>title</code>, replace "Learn" with its equivalent in your language.</li>
+</ol>
+<p>language = "en"
+title = "Learn @lnp2pBot"</p>
+<ol start="5">
+<li><strong>View the Book Locally:</strong> Once inside the directory that we have copied, you can see what the book looks like locally using the following command:</li>
+</ol>
+<pre><code class="language-bash">$ cd &lt;your-language&gt;
+
+$ mdbook serve
+</code></pre>
+<p>Then, open <a href="http://localhost:3000">http://localhost:3000</a> in your web browser to view the created workbook.</p>
+<ol start="6">
+<li><strong>Start Translation:</strong> To begin translating the documentation, access each <code>.md</code> file within the <code>src</code> directory. Any changes you make will automatically appear updated in the book at <a href="http://localhost:3000">http://localhost:3000</a> while mdBook is running.</li>
+</ol>
+<ul>
+<li>
+<p>In the <code>SUMMARY.md</code> file, you will find the structure of the book's chapters. You only need to translate the chapter titles, enclosed in brackets [ ], without modifying the links, enclosed in parentheses ( ).</p>
+</li>
+<li>
+<p>To replace an image or gif with one in your language place it in <code>/assets/images/</code> and delete the original file, but give the new one the same name.</p>
+</li>
+<li>
+<p>Do not translate <code>.md</code> file names or links.</p>
+</li>
+</ul>
+<ol start="7">
+<li><strong>Send a Pull Request (PR):</strong> Once you have finished the translation submit a pull request <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">(Pull Request or PR)</a> in the GitHub repository <a href="https://github.com/lnp2pBot/doc-site">https://github.com/lnp2pBot/doc-site</a>.</li>
+</ol>
+<h3 id="tips"><a class="header" href="#tips">Tips</a></h3>
+<ul>
+<li>Check out this guide on <a href="https://rust-lang.github.io/mdBook/format/markdown.html">How to format texts with markdown</a>.</li>
+<li>You could do the translations without using mdBook by simply translating each file and submit the PR, although that way you could make mistakes</li>
+<li>If you encounter difficulties following this tutorial, please contact an administrator of the <a href="https://t.me/lnp2pbotHelp">telegram group</a> for assistance.</li>
+</ul>
 
                     </main>
 
